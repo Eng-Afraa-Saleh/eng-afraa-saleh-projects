@@ -72,6 +72,7 @@ const ChatBot: React.FC = () => {
         dangerouslyAllowBrowser: true 
       });
 
+      
       const projectsContext = t.projects.items.map(p =>
         `- ${p.title}: ${p.description}\n  Tech: ${p.tech.join(', ')}\n  Live Demo: ${p.link}\n  GitHub: ${p.github}`
       ).join('\n\n');
