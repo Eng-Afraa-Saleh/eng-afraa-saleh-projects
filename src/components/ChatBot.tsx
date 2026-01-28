@@ -9,7 +9,7 @@ interface Message {
   content: string;
 }
 
-const STORAGE_KEY = 'afra_portfolio_chat_history';
+const STORAGE_KEY = 'VITE_GEMINI_API_KEY';
 
 const ChatBot: React.FC = () => {
   const { t, lang } = useLanguage();
