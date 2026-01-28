@@ -104,7 +104,7 @@ const ChatBot: React.FC = () => {
 
 
       const stream = await openai.chat.completions.create({
-        model: "google/gemini-2.0-flash-exp:free",
+        model: "tngtech/deepseek-r1t2-chimera:free",
         messages: [
           { role: "system", content: systemInstruction },
           ...updatedMessages.map(m => ({ role: m.role, content: m.content }))
