@@ -134,7 +134,6 @@ const ChatBot: React.FC = () => {
       setIsTyping(false);
     }
   };
-
   const suggestions = [t.chat.suggested1, t.chat.suggested2, t.chat.suggested3];
 
   return (
