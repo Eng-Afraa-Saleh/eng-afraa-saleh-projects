@@ -19,7 +19,7 @@ const ChatBot: React.FC = () => {
   const [isTyping, setIsTyping] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
-   useEffect(() => {
+  useEffect(() => {
     const savedHistory = localStorage.getItem(STORAGE_KEY);
     if (savedHistory) {
       try {
@@ -49,8 +49,8 @@ const ChatBot: React.FC = () => {
   const handleSend = async (text: string = input) => {
     if (!text.trim() || isTyping) return;
 
-     const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
-
+    const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+    console.log("Is API Key defined?", !!apiKey);
     if (!apiKey) {
       console.error("API Key is missing! Check .env.local");
       alert("API Key is missing");
@@ -59,20 +59,20 @@ const ChatBot: React.FC = () => {
 
     const userMsg: Message = { role: 'user', content: text };
 
-     const updatedMessages = [...messages, userMsg];
+    const updatedMessages = [...messages, userMsg];
 
     setMessages(updatedMessages);
     setInput('');
     setIsTyping(true);
 
     try {
-       const openai = new OpenAI({
+      const openai = new OpenAI({
         baseURL: "https://openrouter.ai/api/v1",
         apiKey: apiKey,
-        dangerouslyAllowBrowser: true 
+        dangerouslyAllowBrowser: true
       });
 
-      
+
       const projectsContext = t.projects.items.map(p =>
         `- ${p.title}: ${p.description}\n  Tech: ${p.tech.join(', ')}\n  Live Demo: ${p.link}\n  GitHub: ${p.github}`
       ).join('\n\n');
@@ -103,8 +103,8 @@ const ChatBot: React.FC = () => {
       `;
 
 
-       const stream = await openai.chat.completions.create({
-        model: "tngtech/deepseek-r1t2-chimera:free", 
+      const stream = await openai.chat.completions.create({
+        model: "tngtech/deepseek-r1t2-chimera:free",
         messages: [
           { role: "system", content: systemInstruction },
           ...updatedMessages.map(m => ({ role: m.role, content: m.content }))
@@ -115,7 +115,7 @@ const ChatBot: React.FC = () => {
       let fullResponse = '';
       setMessages(prev => [...prev, { role: 'assistant', content: '' }]);
 
-       for await (const chunk of stream) {
+      for await (const chunk of stream) {
         const chunkText = chunk.choices[0]?.delta?.content || '';
         fullResponse += chunkText;
         setMessages(prev => {
@@ -138,7 +138,7 @@ const ChatBot: React.FC = () => {
   const suggestions = [t.chat.suggested1, t.chat.suggested2, t.chat.suggested3];
 
   return (
-     <div className={`fixed bottom-6 z-[60] ${lang === 'ar' ? 'left-6' : 'right-6'}`}>
+    <div className={`fixed bottom-6 z-[60] ${lang === 'ar' ? 'left-6' : 'right-6'}`}>
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -215,8 +215,8 @@ const ChatBot: React.FC = () => {
 
                   {/* Message Bubble */}
                   <div className={`max-w-[75%] p-3 rounded-2xl text-sm leading-relaxed ${msg.role === 'user'
-                      ? 'bg-pink-600 text-white rounded-br-none shadow-md shadow-pink-100'
-                      : 'bg-white text-slate-800 shadow-sm border border-slate-100 rounded-tl-none'
+                    ? 'bg-pink-600 text-white rounded-br-none shadow-md shadow-pink-100'
+                    : 'bg-white text-slate-800 shadow-sm border border-slate-100 rounded-tl-none'
                     }`}>
                     {msg.content}
                   </div>
