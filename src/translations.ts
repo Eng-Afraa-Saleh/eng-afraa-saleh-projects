@@ -61,6 +61,15 @@ export const translations: Record<Language, Translation> = {
       all: "الكل",
       items: [
         {
+          title: "موقع شركة - عرض تقديمي",
+          description: "موقع ويب استعراضي لعرض خدمات الشركة وتاريخها وإنجازاتها. يقدم واجهة احترافية مع أقسام الخدمات، الفريق، والمشاريع (مع إخفاء الأقسام الحساسة المربوطة بالخلفية بسبب سياسة الخصوصية).",
+          tech: ["ReactJS", "Tailwind CSS", "Axios", "TypeScript"],
+          link: "https://eng-afraa-saleh.github.io/VioletCompany/",
+          github: "https://github.com/Eng-Afraa-Saleh/VioletCompany",
+          category: "موقع شركة",
+          image: violetcompany
+        },
+        {
           title: "معرض عقاري",
           description: "منصة ويب متطورة لعرض العقارات والوحدات السكنية بأسلوب مرئي جذاب. تتيح للمستخدمين تصفح البيوت والشقق والفيلات مع تفاصيل كاملة، صور عالية الجودة، وخريطة تفاعلية",
           tech: ["ReactJS", "Tailwind CSS", "Firebase", "TypeScript"],
@@ -136,16 +145,8 @@ export const translations: Record<Language, Translation> = {
           github: "https://github.com/Eng-Afraa-Saleh/AcademyWebsite",
           category: "أكاديمي",
           image: academy
-        },
-        {
-          title: "موقع شركة - عرض تقديمي",
-          description: "موقع ويب استعراضي لعرض خدمات الشركة وتاريخها وإنجازاتها. يقدم واجهة احترافية مع أقسام الخدمات، الفريق، والمشاريع (مع إخفاء الأقسام الحساسة المربوطة بالخلفية بسبب سياسة الخصوصية).",
-          tech: ["ReactJS", "Tailwind CSS", "Axios", "TypeScript"],
-          link: "https://eng-afraa-saleh.github.io/VioletCompany/",
-          github: "https://github.com/Eng-Afraa-Saleh/VioletCompany",
-          category: "موقع شركة",
-          image: violetcompany
         }
+        
       ]
     },
     certificates: {
@@ -221,6 +222,15 @@ export const translations: Record<Language, Translation> = {
       techStack: "Tech Stack",
       all: "All",
       items: [
+         {
+          title: "Company Presentation Website",
+          description: "A showcase website displaying company services, history, and achievements. Features professional interface with services, team, and projects sections (sensitive backend-connected sections are hidden due to privacy policies).",
+          tech: ["ReactJS", "Tailwind CSS", "Axios", "TypeScript"],
+          link: "https://eng-afraa-saleh.github.io/VioletCompany/",
+          github: "https://github.com/Eng-Afraa-Saleh/VioletCompany",
+          category: "Corporate Website / Presentation",
+          image: violetcompany
+        },
         {
 
           title: "Real Estate Showcase",
@@ -294,16 +304,8 @@ export const translations: Record<Language, Translation> = {
           github: "https://github.com/Eng-Afraa-Saleh/AcademyWebsite",
           category: "Academic",
           image: academy
-        },
-        {
-          title: "Company Presentation Website",
-          description: "A showcase website displaying company services, history, and achievements. Features professional interface with services, team, and projects sections (sensitive backend-connected sections are hidden due to privacy policies).",
-          tech: ["ReactJS", "Tailwind CSS", "Axios", "TypeScript"],
-          link: "https://eng-afraa-saleh.github.io/VioletCompany/",
-          github: "https://github.com/Eng-Afraa-Saleh/VioletCompany",
-          category: "Corporate Website / Presentation",
-          image: violetcompany
         }
+       
       ]
     },
     certificates: {
@@ -379,6 +381,15 @@ export const translations: Record<Language, Translation> = {
       techStack: "技术栈",
       all: "全部",
       items: [
+         {
+          title: "公司展示网站",
+          description: "展示公司服务、历史和成就的展示网站。具备专业的界面，包含服务、团队和项目部分（由于隐私政策，与后端连接的敏感部分已隐藏）。",
+          tech: ["ReactJS", "Tailwind CSS", "Axios", "TypeScript"],
+          link: "https://eng-afraa-saleh.github.io/VioletCompany/",
+          github: "https://github.com/Eng-Afraa-Saleh/VioletCompany",
+          category: "企业网站 / 展示网站",
+          image: violetcompany
+        },
         {
           title: "房产展示",
           description: "现代化房地产展示平台，以视觉吸引人的方式展示房产和住宅单元。用户可以浏览别墅、公寓、房屋的完整详细信息、高清图片和交互式地图。",
@@ -451,15 +462,6 @@ export const translations: Record<Language, Translation> = {
           github: "https://github.com/Eng-Afraa-Saleh/AcademyWebsite",
           category: "学术平台",
           image: academy
-        },
-        {
-          title: "公司展示网站",
-          description: "展示公司服务、历史和成就的展示网站。具备专业的界面，包含服务、团队和项目部分（由于隐私政策，与后端连接的敏感部分已隐藏）。",
-          tech: ["ReactJS", "Tailwind CSS", "Axios", "TypeScript"],
-          link: "https://eng-afraa-saleh.github.io/VioletCompany/",
-          github: "https://github.com/Eng-Afraa-Saleh/VioletCompany",
-          category: "企业网站 / 展示网站",
-          image: violetcompany
         }
 
       ]
