@@ -67,7 +67,7 @@ const Projects: React.FC = () => {
             spaceBetween={25}
             slidesPerView={1}
              autoplay={{
-              delay: 4000,
+              delay: 5000,
               disableOnInteraction: false,
               pauseOnMouseEnter: true,
             }}
