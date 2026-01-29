@@ -51,7 +51,9 @@ const Footer: React.FC = () => {
                {lang === 'ar' ? "اللاذقية, سوريا" : lang === 'zh' ? "叙利亚拉塔基亚" : "Latakia, Syria"}
             </p>
             <p className="text-pink-400 font-bold">eng.afraa.saleh@gmail.com</p>
+          <p className="text-pink-400 font-bold">+963 985100659</p>
            <p className="text-pink-400 font-bold">+963 992922383</p>
+
 
           </div>
         </div>
