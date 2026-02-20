@@ -18,6 +18,8 @@ interface LanguageContextType {
   t: Translation;
 }
 
+
+
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const useLanguage = () => {
@@ -30,8 +32,7 @@ const App: React.FC = () => {
   const [lang, setLang] = useState<Language>('en');
 
   useEffect(() => {
-    // Set html direction based on language
-    const html = document.documentElement;
+     const html = document.documentElement;
     html.dir = lang === 'ar' ? 'rtl' : 'ltr';
     html.lang = lang;
   }, [lang]);
