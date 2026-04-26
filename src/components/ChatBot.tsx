@@ -104,7 +104,7 @@ const ChatBot: React.FC = () => {
 
 
       const stream = await openai.chat.completions.create({
-        model: "arcee-ai/trinity-large-preview:free",
+        model: "nvidia/nemotron-nano-12b-v2-vl:free",
         messages: [
           { role: "system", content: systemInstruction },
           ...updatedMessages.map(m => ({ role: m.role, content: m.content }))
