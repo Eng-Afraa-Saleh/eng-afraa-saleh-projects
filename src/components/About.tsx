@@ -73,6 +73,11 @@ const About: React.FC = () => {
                   ? "لدي خبرة خاصة في بناء أنظمة محاسبية كاملة باستخدام C#، مما منحني فهماً عميقاً للمنطق البرمجي والتعامل مع البيانات المعقدة قبل أن أتخصص في تطوير الواجهات الأمامية."
                   : "I have specialized experience in building full accounting applications using C#, which gave me a deep understanding of programming logic and complex data handling before specializing in front-end development."}
               </p>
+               <p className="text-lg leading-relaxed opacity-90">
+                {lang === 'ar'
+                  ? "كنت احد اعضاء فريق بناء احد التطبيقات الخاصة بالمحاسبة و الامور المالية بالاضافة لذلك كنت مسؤولة عن انشاء تطبيقات الويب المصغرة المتصله بالتطبيق الاساسي"
+                  : "I was a member of the team that built an accounting and finance application. In addition, I was responsible for creating the web widgets connected to the main application."}
+              </p>
             </div>
           </motion.div>
         </div>
