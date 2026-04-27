@@ -50,10 +50,24 @@ const Footer: React.FC = () => {
             <p className="text-slate-500">
                {lang === 'ar' ? "اللاذقية, سوريا" : lang === 'zh' ? "叙利亚拉塔基亚" : "Latakia, Syria"}
             </p>
-            <p className="text-pink-400 font-bold">eng.afraa.saleh@gmail.com</p>
-          <p className="text-pink-400 font-bold">+963 985100659</p>
-           <p className="text-pink-400 font-bold">+963 992922383</p>
-
+          <a 
+              href="mailto:eng.afraa.saleh@gmail.com" 
+              className="text-pink-400 font-bold hover:text-pink-600 transition-colors block"
+            >
+              eng.afraa.saleh@gmail.com
+            </a>
+            <a 
+              href="tel:+963992922383" 
+              className="text-pink-400 font-bold hover:text-pink-600 transition-colors block"
+            >
+              +963 992922383
+            </a>
+             <a 
+              href="tel:+963985100659" 
+              className="text-pink-400 font-bold hover:text-pink-600 transition-colors block"
+            >
+              +963 985100659
+            </a>
 
           </div>
         </div>
